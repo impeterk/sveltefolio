@@ -1,0 +1,15 @@
+@import '@fontsource-variable/fira-code';
+@import '@fontsource-variable/inter';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    @apply bg-light dark:bg-dark text-slate-800 dark:text-slate-300;
+}
