@@ -61,7 +61,7 @@
 		{#each projects as project, index}
 			<li>
 				<div
-					class={`collapse collapse-arrow shadow-lg ${
+					class={`collapse collapse-arrow shadow-md shadow-neutral ${
 						activeProject === project.id ? `${project.bgColor} ${project.textColor}` : 'bg-base-100'
 					} border ${project.borderColor} `}
 					class:from-90%={project.id !== activeProject}
@@ -94,9 +94,11 @@
 	<div
 		class="row-span-2 flex h-full flex-col gap-4 max-lg:row-start-2 lg:col-span-2 lg:col-start-2"
 	>
-		<div class="mockup-browser hidden border border-info bg-base-300 md:block">
+		<div
+			class="mockup-browser hidden border border-info bg-base-300 shadow-lg shadow-neutral md:block"
+		>
 			<div class="mockup-browser-toolbar">
-				<div class="text-xlI input border border-base-100">
+				<div class="input border border-base-100 text-xl font-bold">
 					{#key projects[activeProject].id}
 						<span
 							in:fly={{ x: 300, duration: 300, delay: 500 }}
