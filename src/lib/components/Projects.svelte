@@ -18,7 +18,11 @@
 			borderColor: 'border-sky-600',
 			href: 'a',
 			icon: 'logos:react',
-			tech: ['react', 'redux', 'bulmaCSS']
+			tech: [
+				{ name: 'react', href: 'https://react.dev/' },
+				{ name: 'redux', href: 'https://redux.js.org/' },
+				{ name: 'bulmaCSS', href: 'https://bulma.io/' }
+			]
 		},
 		{
 			id: 1,
@@ -35,7 +39,12 @@
 			borderColor: 'border-teal-600',
 			href: 'a',
 			icon: 'logos:vue',
-			tech: ['VueJS', 'Pinia', 'TailwindCSS', 'Firebase']
+			tech: [
+				{ name: 'VueJS', href: 'https://vuejs.org/' },
+				{ name: 'Pinia', href: 'https://pinia.vuejs.org/' },
+				{ name: 'TailwindCSS', href: 'https://tailwindcss.com/' },
+				{ name: 'Firebase', href: 'https://firebase.google.com/' }
+			]
 		},
 		{
 			id: 2,
@@ -51,7 +60,11 @@
 			textColor: 'text-amber-100',
 			borderColor: 'border-amber-700',
 			icon: 'logos:svelte-icon',
-			tech: ['SvelteKit', 'TailwindCSS', 'Firebase']
+			tech: [
+				{ name: 'SvelteKit', href: 'https://kit.svelte.dev/' },
+				{ name: 'TailwindCSS', href: 'https://tailwindcss.com/' },
+				{ name: 'Firebase', href: 'https://firebase.google.com/' }
+			]
 		}
 	];
 </script>
@@ -81,9 +94,13 @@
 							{@html project.content}
 						</div>
 						<div class="divider divider-neutral my-1"></div>
-						<div class="flex justify-center gap-4 font-bold text-neutral">
-							{#each project.tech as tech}
-								<a href="#" class="link hover:text-neutral-content">{tech}</a>
+						<div class="flex justify-center gap-4 font-bold">
+							{#each project.tech as { name, href }}
+								<a
+									{href}
+									class="link-hover link link-neutral text-lg capitalize hover:text-neutral-content"
+									>{name}</a
+								>
 							{/each}
 						</div>
 					</div>
