@@ -2,7 +2,7 @@
 	import GradientText from './GradientText.svelte';
 </script>
 
-<section class="hero mx-auto my-auto w-full max-w-5xl font-sans md:my-0 md:py-20">
+<section class="mx-auto my-auto w-full max-w-5xl py-20 font-sans md:my-0">
 	<div class="wrap flex flex-col gap-4 text-center">
 		<h3 class="font-code text-3xl md:text-left md:text-2xl">Hello World</h3>
 		<h1 class="text-center font-sans text-7xl font-black">

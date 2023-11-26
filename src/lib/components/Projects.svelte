@@ -56,8 +56,8 @@
 	];
 </script>
 
-<section class="grid gap-8 max-lg:grid-rows-3 lg:grid-cols-3">
-	<ul class="flex flex-col gap-8 max-lg:row-start-1 lg:col-start-1 xl:pt-16">
+<section class="flex flex-col gap-8 max-lg:grid-rows-2 lg:grid lg:grid-cols-3">
+	<ul class="flex flex-col gap-8 lg:col-start-1 xl:pt-16">
 		{#each projects as project, index}
 			<li>
 				<div
@@ -91,9 +91,7 @@
 			</li>
 		{/each}
 	</ul>
-	<div
-		class="row-span-2 flex h-full flex-col gap-4 max-lg:row-start-2 lg:col-span-2 lg:col-start-2"
-	>
+	<div class="flex h-full flex-col gap-4 lg:col-span-2 lg:col-start-2">
 		<div
 			class="mockup-browser hidden border border-info bg-base-300 shadow-lg shadow-neutral md:block"
 		>
