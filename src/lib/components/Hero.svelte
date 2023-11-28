@@ -11,7 +11,7 @@
 		</h1>
 		<h2 class="mt-4 font-code text-5xl font-extrabold md:text-end">
 			I
-			<span class="text-zinc-600 dark:text-zinc-400">{'<code />'}</span>
+			<span class="text-zinc-500">{'<code />'}</span>
 			web apps.
 		</h2>
 		<p class="mt-8 text-2xl font-semibold leading-7 md:text-justify">
