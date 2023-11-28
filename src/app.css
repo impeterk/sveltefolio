@@ -5,11 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-html {
-    height: 100%;
-}
 
 body {
-    @apply bg-light dark:bg-dark text-slate-800 dark:text-slate-300;
+    @apply text-base-content bg-theme min-h-screen
 }

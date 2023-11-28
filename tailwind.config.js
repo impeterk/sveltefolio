@@ -14,7 +14,24 @@ export default {
       }
     },
   },
-  plugins: [],
-  darkMode: ['class', '[data-theme="dark"]',]
+  plugins: [require("daisyui"), require('@tailwindcss/typography')],
+  daisyui: {
+    themes: [
+      {
+
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          ".bg-theme": {
+            background: 'conic-gradient(from .5turn at bottom center, lightblue, white)'
+          },
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          ".bg-theme": {
+            background: 'conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111)'
+          },
+        }
+      }]
+  }
 }
 

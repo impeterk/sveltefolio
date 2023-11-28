@@ -8,40 +8,31 @@
 		let theme = action.searchParams.get('theme');
 
 		if (theme) {
-			theme =
-				theme === 'system'
-					? window.matchMedia('(prefers-color-scheme: dark)').matches
-						? 'dark'
-						: 'light'
-					: theme;
 			document.documentElement.setAttribute('data-theme', theme);
 		}
 	};
 </script>
 
-<form method="POST" use:enhance={submitUpdateTheme} class="flex gap-2 text-3xl dark:text-zinc-600">
-	<button formaction="/?/setTheme&theme=light" class="flex">
+<form method="POST" use:enhance={submitUpdateTheme} class="flex gap-2 text-3xl text-base-content">
+	<button formaction="/?/setTheme&theme=light" class="flex" aria-label="sets color theme to light">
 		<iconify-icon
 			class="cursor-pointer"
 			icon="ph:sun"
-			class:text-amber-600={colorTheme === 'light'}
-			aria-label="sets color theme to light"
+			class:text-warning={colorTheme === 'light'}
 		/>
 	</button>
-	<button formaction="/?/setTheme&theme=dark" class="flex">
-		<iconify-icon
-			class="cursor-pointer"
-			icon="ph:moon"
-			class:text-sky-600={colorTheme === 'dark'}
-			aria-label="sets color theme to dark"
-		/>
+	<button formaction="/?/setTheme&theme=dark" class="flex" aria-label="sets color theme to dark">
+		<iconify-icon class="cursor-pointer" icon="ph:moon" class:text-info={colorTheme === 'dark'} />
 	</button>
-	<button formaction="/?/setTheme&theme=system" class="flex">
+	<button
+		formaction="/?/setTheme&theme=system"
+		class="flex"
+		aria-label="sets color theme to system preference"
+	>
 		<iconify-icon
 			class="cursor-pointer"
 			icon="ph:monitor"
 			class:text-orange-600={colorTheme === 'system'}
-			aria-label="sets color theme to system preference"
 		/>
 	</button>
 </form>
