@@ -1,7 +1,7 @@
 <script lang="ts">
-	import 'iconify-icon';
 	import Hero from '$lib/components/Hero.svelte';
 	import * as config from '$lib/config';
+	import Projects from '$lib/components/Projects.svelte';
 </script>
 
 <svelte:head>
@@ -13,3 +13,4 @@
 	<meta property="og:description" content={config.description} />
 </svelte:head>
 <Hero />
+<Projects />

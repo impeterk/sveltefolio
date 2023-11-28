@@ -7,7 +7,7 @@
 	$: ({ colorTheme } = data);
 </script>
 
-<div class="layout mx-auto min-h-screen max-w-7xl px-8 xl:px-0">
+<div class="layout mx-auto h-full max-w-7xl px-8 xl:px-0">
 	<header>
 		<div></div>
 	</header>
