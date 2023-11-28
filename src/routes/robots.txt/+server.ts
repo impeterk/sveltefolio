@@ -1,7 +1,5 @@
 import { url } from '$lib/config';
 
-export const prerender = true;
-
 export async function GET(): Promise<Response> {
 	//prettier-ignore
 
