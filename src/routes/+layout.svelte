@@ -1,13 +1,12 @@
 <script lang="ts">
 	import '../app.css';
-	import Footer from '$lib/components/Footer.svelte';
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+	import {ThemeSwitcher,Footer} from '$lib/components'
 	export let data;
 
 	$: ({ colorTheme } = data);
 </script>
 
-<div class="layout mx-auto h-full max-w-7xl px-8 xl:px-0">
+<div class="layout mx-auto min-h-full max-w-7xl px-8 xl:px-0">
 	<header>
 		<div></div>
 	</header>

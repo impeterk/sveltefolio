@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Hero from '$lib/components/Hero.svelte';
+	import {Hero, Projects } from '$lib/components';
 	import * as config from '$lib/config';
 </script>
 
@@ -12,3 +12,4 @@
 	<meta property="og:description" content={config.description} />
 </svelte:head>
 <Hero />
+<Projects />
