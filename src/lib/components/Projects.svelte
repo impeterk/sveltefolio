@@ -71,7 +71,9 @@
 	];
 </script>
 
-<section class="flex flex-col gap-8 max-lg:grid-rows-2 lg:grid lg:grid-cols-3 justify-items-center items-center">
+<section
+	class="flex flex-col items-center justify-items-center gap-8 max-lg:grid-rows-2 lg:grid lg:grid-cols-3"
+>
 	<div class="col-span-3 flex w-full max-w-6xl content-center items-center justify-center gap-4">
 		<h2
 			class="relative w-max shrink-0 font-code text-[2.5rem] font-extrabold sm:text-6xl md:font-medium"
@@ -87,7 +89,7 @@
 		</h2>
 		<div class="h-0.5 w-full bg-gradient-to-r from-info to-accent max-lg:hidden"></div>
 	</div>
-	<ul class="flex flex-col gap-8 lg:col-start-1 lg:justify-self-end sm:w-4/5 lg:max-xl:w-full">
+	<ul class="flex flex-col gap-8 sm:w-4/5 lg:col-start-1 lg:justify-self-end lg:max-xl:w-full">
 		{#each projects as project, index}
 			<li>
 				<div
@@ -111,7 +113,7 @@
 							{@html project.content}
 						</div>
 						<div class="divider divider-neutral my-1"></div>
-						<div class="flex justify-center gap-4 font-bold flex-wrap">
+						<div class="flex flex-wrap justify-center gap-4 font-bold">
 							{#each project.tech as { name, href }}
 								<a
 									{href}
@@ -142,13 +144,12 @@
 				</div>
 			</div>
 			<div
-				class="artboard artboard-horizontal w-[640px] h-[360px] xl:w-[736px] xl:h-[414px] flex justify-center overflow-hidden border-t border-info "
+				class="artboard artboard-horizontal flex h-[360px] w-[640px] justify-center overflow-hidden border-t border-info xl:h-[414px] xl:w-[736px]"
 			>
 				{#key projects[activeProject].id}
 					<img
-					in:fly={{ x: 300, duration: 600, delay: 600,  easing: quintOut }}
-					out:fly={{ x: -300,duration: 600,  easing: quintOut }}
-
+						in:fly={{ x: 300, duration: 600, delay: 600, easing: quintOut }}
+						out:fly={{ x: -300, duration: 600, easing: quintOut }}
 						src={projects[activeProject].img.desktop}
 						alt="project"
 						class="w-full"
@@ -156,26 +157,27 @@
 				{/key}
 			</div>
 		</div>
-		<div class="mockup-phone md:hidden border-none bg-base-content">
+		<div class="mockup-phone border-none bg-base-content md:hidden">
 			<div class="camera"></div>
 			<div class="display">
 				<div class="artboard h-[600px] w-[300px] bg-dark">
 					{#key projects[activeProject].id}
-					<div 
-					class=" flex items-center justify-center  h-full"
-					in:fly={{ x: '50%', duration: 500, delay: 500 }}
-					out:fly={{ x: '-100%', duration: 500 }}
->
-					{#if !projects[activeProject].img.mobile}
-					<span class="text-2xl text-slate-100 text-center">Sorry No Mobile Version yet</span>
-					{:else}
-						<img
-							src={projects[activeProject].img.mobile}
-							alt="project"
+						<div
 							class="h-full"
-						/>
-						{/if}
-					</div>
+							in:fly={{ x: '50%', duration: 500, delay: 500 }}
+							out:fly={{ x: '-100%', duration: 500 }}
+						>
+							{#if !projects[activeProject].img.mobile}
+								<div class="animate-pulse flex h-full flex-col items-center justify-center">
+									<span class="text-center text-3xl"
+										><GradientText>Sorry No Mobile Version yet</GradientText>
+									</span>
+									<Icon icon={projects[activeProject].icon} class="mt-14 text-7xl" />
+								</div>
+							{:else}
+								<img src={projects[activeProject].img.mobile} alt="project" class="h-full" />
+							{/if}
+						</div>
 					{/key}
 				</div>
 			</div>
