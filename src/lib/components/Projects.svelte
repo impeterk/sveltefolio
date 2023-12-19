@@ -3,93 +3,16 @@
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { GradientText } from './';
+	import SectionTitle from './SectionTitle.svelte';
 	let activeProject = 2;
-	let projects = [
-		{
-			id: 0,
-			name: 'react',
-			content: `<p>Simple react Single page application created with <strong>React</strong> and <strong>Bulma</strong> for styling. 
-                Utilizes reddit json API to browse posts and subreddits on any device. Tou can even download it, thanks to <storng>PWA</strong> integration.</p>`,
-			title: 'React Reddit Client',
-			img: {
-				desktop: '/react-desktop.webp',
-				mobile: '/react-mobile.webp'
-			},
-			bgColor: 'bg-sky-600',
-			textColor: 'text-sky-100',
-			borderColor: 'border-sky-600',
-			href: 'https://reddit.peterkudelas.eu/about',
-			icon: 'logos:react',
-			tech: [
-				{ name: 'react', href: 'https://react.dev/' },
-				{ name: 'redux', href: 'https://redux.js.org/' },
-				{ name: 'bulmaCSS', href: 'https://bulma.io/' }
-			]
-		},
-		{
-			id: 1,
-			name: 'vue',
-			content:
-				'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, API calls to Read, Update and Create new tickets. Created with <strong>Vue</strong>, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling and <strong>Firebase</strong for backend.',
-			title: 'Check my ticket',
-			img: {
-				desktop: '/vue-desktop.webp',
-				mobile: '/vue-mobile.webp'
-			},
-			bgColor: 'bg-teal-600',
-			textColor: 'text-teal-100',
-			borderColor: 'border-teal-600',
-			href: 'https://www.henkel-adhesives.com/check-my-ticket.html',
-			icon: 'logos:vue',
-			tech: [
-				{ name: 'VueJS', href: 'https://vuejs.org/' },
-				{ name: 'Pinia', href: 'https://pinia.vuejs.org/' },
-				{ name: 'TailwindCSS', href: 'https://tailwindcss.com/' },
-				{ name: 'Firebase', href: 'https://firebase.google.com/' }
-			]
-		},
-		{
-			id: 2,
-			name: 'svelte',
-			content:
-				'Full Stack mulit tenant Web application, which helps you with SEO. Includes user Authentication, REST API and much more. Created with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong> and <strong>Firebase</strong>',
-			img: {
-				desktop: '/svelte-desktop.webp',
-				mobile: ''
-			},
-			title: 'SEO Catcher',
-			bgColor: 'bg-amber-700',
-			textColor: 'text-amber-100',
-			borderColor: 'border-amber-700',
-			icon: 'logos:svelte-icon',
-			tech: [
-				{ name: 'SvelteKit', href: 'https://kit.svelte.dev/' },
-				{ name: 'TailwindCSS', href: 'https://tailwindcss.com/' },
-				{ name: 'Firebase', href: 'https://firebase.google.com/' }
-			]
-		}
-	];
+	import { projects } from '$lib';
 </script>
 
 <section
-	class="flex flex-col items-center justify-items-center gap-8 max-lg:grid-rows-2 lg:grid lg:grid-cols-3"
+	class="flex min-h-screen flex-col items-center justify-items-center gap-8 max-sm:mt-20 sm:gap-0 sm:gap-y-20 lg:grid lg:grid-cols-3 lg:content-center lg:items-start xl:h-screen"
 >
-	<div class="col-span-3 flex w-full max-w-6xl content-center items-center justify-center gap-4">
-		<h2
-			class="relative w-max shrink-0 font-code text-[2.5rem] font-extrabold sm:text-6xl md:font-medium"
-		>
-			<span class="absolute left-0 blur-2xl">
-				<GradientText from="from-sky-500" to="to-accent">
-					{'< Projects />'}
-				</GradientText>
-			</span>
-			<GradientText from="from-info" to="to-info">
-				{'< Projects />'}
-			</GradientText>
-		</h2>
-		<div class="h-0.5 w-full bg-gradient-to-r from-info to-accent max-lg:hidden"></div>
-	</div>
-	<ul class="flex flex-col gap-8 sm:w-4/5 lg:col-start-1 lg:justify-self-end lg:max-xl:w-full">
+	<SectionTitle from="from-info" to="to-info" title="<Projects />" />
+	<ul class="flex flex-col gap-8 sm:w-4/5 lg:col-start-1 lg:w-full lg:justify-self-end">
 		{#each projects as project, index}
 			<li>
 				<div
@@ -127,9 +50,11 @@
 			</li>
 		{/each}
 	</ul>
-	<div class="flex h-full flex-col gap-8 lg:col-span-2 lg:col-start-2 lg:max-xl:justify-self-end">
+	<div
+		class="flex h-full flex-col gap-8 sm:max-xl:mb-20 lg:col-span-2 lg:col-start-2 lg:justify-self-end"
+	>
 		<div
-			class="mockup-browser hidden border border-info bg-base-300 shadow-lg shadow-neutral md:block"
+			class="mockup-browser hidden border border-info bg-base-300 shadow shadow-neutral md:block"
 		>
 			<div class="mockup-browser-toolbar">
 				<div class="input border border-base-100 text-xl font-bold">
@@ -144,7 +69,7 @@
 				</div>
 			</div>
 			<div
-				class="artboard artboard-horizontal flex h-[360px] w-[640px] justify-center overflow-hidden border-t border-info xl:h-[414px] xl:w-[736px]"
+				class="artboard artboard-horizontal flex h-[349px] w-[620px] justify-center overflow-hidden border-t border-info xl:h-[414px] xl:w-[736px]"
 			>
 				{#key projects[activeProject].id}
 					<img
@@ -153,6 +78,7 @@
 						src={projects[activeProject].img.desktop}
 						alt="project"
 						class="w-full"
+						loading="lazy"
 					/>
 				{/key}
 			</div>
@@ -160,7 +86,7 @@
 		<div class="mockup-phone border-none bg-base-content md:hidden">
 			<div class="camera"></div>
 			<div class="display">
-				<div class="artboard h-[600px] w-[300px] bg-dark">
+				<div class="artboard h-[600px] max-w-[300px] bg-dark">
 					{#key projects[activeProject].id}
 						<div
 							class="h-full"
@@ -168,24 +94,44 @@
 							out:fly={{ x: '-100%', duration: 500 }}
 						>
 							{#if !projects[activeProject].img.mobile}
-								<div class="animate-pulse flex h-full flex-col items-center justify-center">
+								<div class="flex h-full animate-pulse flex-col items-center justify-center">
 									<span class="text-center text-3xl"
 										><GradientText>Sorry No Mobile Version yet</GradientText>
 									</span>
 									<Icon icon={projects[activeProject].icon} class="mt-14 text-7xl" />
 								</div>
 							{:else}
-								<img src={projects[activeProject].img.mobile} alt="project" class="h-full" />
+								<img
+									src={projects[activeProject].img.mobile}
+									alt="project"
+									class="h-full"
+									loading="lazy"
+								/>
 							{/if}
 						</div>
 					{/key}
 				</div>
 			</div>
 		</div>
-		<a href={projects[activeProject].href} class="w-full self-end md:w-fit">
-			<button class="btn btn-accent w-full" class:btn-disabled={!projects[activeProject].href}
-				>{projects[activeProject].href ? `Check live project` : 'Sorry this project is not public'}
-			</button></a
-		>
+		<div class="flex flex-wrap items-center">
+			<div class="mx-auto flex space-x-12 max-sm:mb-8">
+				{#each projects[activeProject].tech as { icon, name, href }}
+					<a {href} target="_blank" rel="noopener noreferrer" class="group">
+						<div class="relative flex flex-col items-center">
+							<Icon {icon} class="absolute left-0 text-4xl blur-xl" />
+							<Icon {icon} class="text-4xl group-hover:animate-pulse sm:text-5xl" />
+							<p class="mt-2 text-xs sm:hidden">{name}</p>
+						</div>
+					</a>
+				{/each}
+			</div>
+			<a href={projects[activeProject].href} class="w-full md:w-fit">
+				<button class="btn btn-accent w-full" class:btn-disabled={!projects[activeProject].href}
+					>{projects[activeProject].href
+						? `Check live project`
+						: 'Sorry this project is not public'}
+				</button></a
+			>
+		</div>
 	</div>
 </section>

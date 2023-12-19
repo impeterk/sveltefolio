@@ -5,10 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+    @apply transition-all duration-100 ease-linear
+}
+
 body,
 html {
     @apply h-full m-0 p-0 box-border
 }
+
+
 
 body {
     @apply text-base-content;

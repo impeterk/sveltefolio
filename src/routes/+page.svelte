@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {Hero, Projects } from '$lib/components';
+	import { Hero, Projects, AboutMe } from '$lib/components';
 	import * as config from '$lib/config';
 </script>
 
@@ -13,3 +13,4 @@
 </svelte:head>
 <Hero />
 <Projects />
+<AboutMe />

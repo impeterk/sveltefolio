@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import {ThemeSwitcher,Footer} from '$lib/components'
+	import { ThemeSwitcher, Footer } from '$lib/components';
 	export let data;
 
 	$: ({ colorTheme } = data);
@@ -10,7 +10,7 @@
 	<header>
 		<div></div>
 	</header>
-	<main class="flex flex-col">
+	<main class="flex flex-col gap-8 lg:max-xl:gap-40 xl:gap-0">
 		<slot />
 	</main>
 	<Footer>
