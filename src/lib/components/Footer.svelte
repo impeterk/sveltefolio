@@ -1,6 +1,5 @@
 <script lang="ts">
-	import ThemeSwitcher from './ThemeSwitcher.svelte';
-	import 'iconify-icon';
+	import Icon from "@iconify/svelte";
 </script>
 
 <div
@@ -16,7 +15,7 @@
 			aria-label="Svelte Kit Link"
 			class="flex"
 		>
-			<iconify-icon icon="logos:svelte-icon" class="text-2xl" /></a
+			<Icon icon="logos:svelte-icon" class="text-2xl" /></a
 		>
 		<a
 			href="http://tailwindcss.com"
@@ -25,7 +24,7 @@
 			aria-label="tailwind CSS link"
 			class="flex"
 		>
-			<iconify-icon icon="devicon:tailwindcss" class="text-2xl" /></a
+			<Icon icon="devicon:tailwindcss" class="text-2xl" /></a
 		>
 	</div>
 	<slot />

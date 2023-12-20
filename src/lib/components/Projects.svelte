@@ -4,49 +4,23 @@
 	import { quintOut } from 'svelte/easing';
 	import { GradientText } from './';
 	import SectionTitle from './SectionTitle.svelte';
-	let activeProject = 2;
+	let activeProject = 0;
 	import { projects } from '$lib';
+	import ProjectAccordion from './ProjectAccordion.svelte';
+
+	function updateActive(index: number) {
+		return (activeProject = index);
+	}
 </script>
 
 <section
 	class="flex min-h-screen flex-col items-center justify-items-center gap-8 max-sm:mt-20 sm:gap-0 sm:gap-y-20 lg:grid lg:grid-cols-3 lg:content-center lg:items-start xl:h-screen"
 >
-	<SectionTitle from="from-info" to="to-info" title="<Projects />" />
+	<SectionTitle from="from-info" to="to-info" title="<Projects />" font="font-code"></SectionTitle>
 	<ul class="flex flex-col gap-8 sm:w-4/5 lg:col-start-1 lg:w-full lg:justify-self-end">
 		{#each projects as project, index}
 			<li>
-				<div
-					class={`collapse collapse-arrow shadow-md shadow-neutral ${
-						activeProject === project.id ? `${project.bgColor} ${project.textColor}` : 'bg-base-100'
-					} border ${project.borderColor} `}
-					class:from-90%={project.id !== activeProject}
-				>
-					<input
-						type="radio"
-						name="my-accordion-2"
-						checked={project.id === activeProject}
-						on:click={() => (activeProject = index)}
-					/>
-					<div class="collapse-title flex items-center gap-4 text-xl font-medium capitalize">
-						{project.name}
-						<Icon icon={project.icon} class="text-2xl" />
-					</div>
-					<div class="collapse-content flex w-full flex-col">
-						<div class={`prose${project.textColor}`}>
-							{@html project.content}
-						</div>
-						<div class="divider divider-neutral my-1"></div>
-						<div class="flex flex-wrap justify-center gap-4 font-bold">
-							{#each project.tech as { name, href }}
-								<a
-									{href}
-									class="link-hover link link-neutral text-lg capitalize hover:text-neutral-content"
-									>{name}</a
-								>
-							{/each}
-						</div>
-					</div>
-				</div>
+				<ProjectAccordion {project} {activeProject} on:updateActive={() => updateActive(index)} />
 			</li>
 		{/each}
 	</ul>
