@@ -1,4 +1,6 @@
 import type { Actions } from './$types';
+import { mailer } from '$lib/server/mailer';
+
 export const actions: Actions = {
 	setTheme: async ({ url, cookies }) => {
 		const theme = url.searchParams.get('theme');
@@ -12,15 +14,14 @@ export const actions: Actions = {
 	},
 	contact: async({request}) => {
 		const data = await request.formData()
-		const email = data.get('email');
-		const name = data.get('name')
-		const message = data.get('message')
+		const email = data.get('email') as string;
+		const name = data.get('name') as string
+		const message = data.get('message') as string
 
-		console.log ({email, name, message})
 
-		await new Promise((fulfil) => setTimeout(fulfil, 2000));
+		const response = await mailer({email, name, message})
 		
-		if (message) {
+		if (response) {
 			return {
 				success: true
 			}
