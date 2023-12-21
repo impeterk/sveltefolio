@@ -18,8 +18,9 @@ export const actions: Actions = {
 
 		console.log ({email, name, message})
 
+		await new Promise((fulfil) => setTimeout(fulfil, 2000));
+		
 		if (message) {
-
 			return {
 				success: true
 			}

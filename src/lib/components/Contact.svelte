@@ -2,6 +2,8 @@
 	import Icon from '@iconify/svelte';
 import SectionTitle from './SectionTitle.svelte';
 import {enhance} from "$app/forms"
+
+export let sending = false
 </script>
 
 <section
@@ -12,7 +14,14 @@ import {enhance} from "$app/forms"
     <div class="toast toast-top toast-center">
       </div>
 
-	<form action="/?/contact" method="POST" class="w-full flex flex-col gap-4 items-center max-w-sm" use:enhance>
+	<form action="/?/contact" method="POST" class="w-full flex flex-col gap-4 items-center max-w-sm" use:enhance={() => {
+		sending = true;
+
+		return async ({ update }) => {
+			await update();
+			sending = false;
+		};
+	}}>
 		<label class="form-control w-full  ">
 			<div class="label">
 				<span class="label-text">Name</span>
@@ -42,11 +51,15 @@ import {enhance} from "$app/forms"
             <div class="label">
               <span class="label-text">Message</span>
             </div>
-            <textarea class="textarea textarea-bordered w-full  " placeholder="Lorem ipsum dolor..." rows=6 name="message"></textarea>
+            <textarea class="textarea textarea-bordered w-full  " placeholder="Lorem ipsum dolor..." rows=6 name="message" ></textarea>
           </label>
-          <button class="btn btn-success w-full sm:w-1/2 self-end " type="submit">
-            <Icon icon="fa:send-o" class="text-xl"/>
-            Send
+          <button class="btn btn-success w-full sm:w-1/2 self-end" disabled={sending} type="submit">
+			{#if sending }
+			<Icon icon="icomoon-free:spinner2" class="animate-spin text-2xl" />
+				{:else}
+				<Icon icon="fa:send-o" class="text-xl"/>
+				Send
+			{/if}
         </button>
 	</form>
 </section>
