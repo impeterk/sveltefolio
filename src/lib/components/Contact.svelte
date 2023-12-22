@@ -53,7 +53,7 @@ export let sending = false
             </div>
             <textarea class="textarea textarea-bordered w-full  " placeholder="Lorem ipsum dolor..." rows=6 name="message" ></textarea>
           </label>
-          <button class="btn btn-success w-full sm:w-1/2 self-end" disabled={sending} type="submit">
+          <button class="btn btn-warning w-full sm:w-1/2 self-end" disabled={sending} type="submit">
 			{#if sending }
 			<Icon icon="icomoon-free:spinner2" class="animate-spin text-2xl" />
 				{:else}
