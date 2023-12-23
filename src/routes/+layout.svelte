@@ -10,7 +10,7 @@
 	<header>
 		<div></div>
 	</header>
-	<main class="flex flex-col gap-8 lg:max-xl:gap-40 xl:gap-0">
+	<main class="flex flex-col gap-20 lg:max-xl:gap-40 ">
 		<slot />
 	</main>
 	<Footer>

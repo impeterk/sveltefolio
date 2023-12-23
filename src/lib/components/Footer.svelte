@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="relative mt-20 flex flex-col gap-2 border-t border-neutral py-4 font-mono md:flex-row md:items-center lg:justify-center"
+	class="relative mt-20 xl:mt-10 2xl:mt-0 flex flex-col gap-2 border-t border-neutral py-4 font-mono md:flex-row md:items-center lg:justify-center"
 >
 	<p>Peter Kudelas &copy {new Date().getFullYear()} |</p>
 	<div class="inline-flex space-x-3">

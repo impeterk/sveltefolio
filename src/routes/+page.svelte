@@ -1,23 +1,23 @@
 <script lang="ts">
 	import { Hero, Projects, AboutMe, Contact } from '$lib/components';
 	import * as config from '$lib/config';
-	import {fade} from "svelte/transition"
+	import { fade } from 'svelte/transition';
 
-	export let form
-	let success = false
-	let error = false
+	export let form;
+	let success = false;
+	let error = false;
 	$: if (form?.success) {
-		success = true
+		success = true;
 		setTimeout(() => {
-			success = false
-		},3000)
+			success = false;
+		}, 3000);
 	}
 
 	$: if (form?.error) {
-		error = true
+		error = true;
 		setTimeout(() => {
-			error = false
-		},3000)
+			error = false;
+		}, 3000);
 	}
 </script>
 
@@ -35,17 +35,17 @@
 <Contact />
 
 <!-- contact form related -->
-<div class="toast toast-top toast-center">
+<div class="toast toast-center toast-top">
 	{#if success}
 	<div class="alert alert-success" in:fade out:fade>
-		<span>Message sent successfully.</span>
+		<span>Message have been send successfully 🎉</span>
 	</div>
+	
 	{/if}
-
 	
 	{#if error}
 	<div class="alert alert-error" in:fade out:fade>
-		<span>There was an error.</span>
+		<span>Oopsie daisy! It worked on My Machine ☹️</span>
 	</div>
 	{/if}
-  </div>
+</div>

@@ -14,7 +14,7 @@
 </script>
 
 <section
-	class="flex min-h-screen flex-col items-center justify-items-center gap-8 max-sm:mt-20 sm:gap-0 sm:gap-y-20 lg:grid lg:grid-cols-3 lg:content-center lg:items-start xl:h-screen"
+	class="flex flex-col min-h-screen items-center justify-items-center gap-8 sm:gap-0 sm:gap-y-20 lg:grid lg:grid-cols-3 lg:content-center lg:items-start"
 >
 	<SectionTitle from="from-info" to="to-info" title="<Projects />" font="font-code"></SectionTitle>
 	<ul class="flex flex-col gap-8 sm:w-4/5 lg:col-start-1 lg:w-full lg:justify-self-end">

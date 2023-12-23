@@ -5,7 +5,7 @@
 		></span>
 		<span class="about-gradient absolute inset-0 h-full w-full border-2 border-success rounded-xl transition-all duration-500 ease-in-out delay-75 "></span>
 		<span class="relative text-black group-hover:text-white rounded-xl"
-			><img src="/AboutMeNoBg.webp" alt="avatar" width="300px" height="400px" class="rounded-xl"/></span
+			><img src="/AboutMeNoBg.webp" alt="avatar" width="300px" height="400px" class="rounded-xl contrast-110 w-[240px] h-[320px] lg:w-[300px] lg:h-[400px]" loading="lazy"/></span
 		>
 	</span>
 </figure>
