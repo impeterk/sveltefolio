@@ -1,5 +1,5 @@
 <script lang="ts">
-	import GradientText from './GradientText.svelte';
+	import {GradientText} from '..';
 </script>
 
 <section class="mx-auto flex min-h-screen w-full max-w-5xl flex-col font-sans">

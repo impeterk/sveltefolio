@@ -1,11 +1,11 @@
 <script lang="ts">
-	import SectionTitle from './SectionTitle.svelte';
-	import AboutMeImage from './AboutMeImage.svelte';
+	import {SectionTitle, AboutMeImage} from '..'
 	import Icon from '@iconify/svelte';
 </script>
 
 <section
 	class="min-h-screen lg:max-xl:my-0 flex flex-col items-center justify-items-center gap-8 max-sm:mt-20 lg:grid lg:grid-cols-2 lg:content-center lg:gap-0 lg:gap-y-20"
+	id="aboutme"
 >
 	<SectionTitle from="from-accent" to="to-accent" title="About Me" font="font-sans" />
 	<div class="col-span-1 col-start-2 lg:justify-self-start lg:w-4/5">

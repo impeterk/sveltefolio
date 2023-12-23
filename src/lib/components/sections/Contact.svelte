@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import SectionTitle from './SectionTitle.svelte';
+	import {SectionTitle} from '..';
 	import { enhance } from '$app/forms';
 
 	export let sending = false;
@@ -8,6 +8,7 @@
 
 <section
 	class="flex min-h-screen flex-col items-center justify-items-center gap-8 max-xl:mt-20 max-sm:mt-20 lg:grid lg:grid-cols-2 lg:content-center lg:items-start lg:gap-0 lg:gap-y-12"
+	id="contact"
 >
 	<SectionTitle from="from-orange-500" to="to-amber-500" font="font-sans" title="Contact Me" />
 	<div class="col-span-1 col-start-1 self-center mt-8">

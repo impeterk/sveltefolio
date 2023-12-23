@@ -1,11 +1,11 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import { createEventDispatcher } from 'svelte';
+	import type { projects } from '$lib';
 
 	const dispatch = createEventDispatcher();
 	export let activeProject: number, project: (typeof projects)[number];
 
-	import Icon from '@iconify/svelte';
-	import type { projects } from '$lib';
 </script>
 
 <div

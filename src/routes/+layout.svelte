@@ -1,15 +1,13 @@
 <script lang="ts">
 	import '../app.css';
-	import { ThemeSwitcher, Footer } from '$lib/components';
+	import { ThemeSwitcher, Footer, Header } from '$lib/components';
 	export let data;
 
 	$: ({ colorTheme } = data);
 </script>
 
 <div class="layout mx-auto min-h-full max-w-7xl px-8 xl:px-0">
-	<header>
-		<div></div>
-	</header>
+	<Header />
 	<main class="flex flex-col gap-20 lg:max-xl:gap-40 ">
 		<slot />
 	</main>

@@ -1,3 +1,8 @@
+import ReactDesktop from '$lib/assets/react-desktop.webp?enhanced';
+import ReactMobile from '$lib/assets/react-mobile.webp?enhanced';
+import vueDesktop from '$lib/assets/vue-desktop.webp?enhanced';
+import vueMobile from '$lib/assets/vue-mobile.webp?enhanced';
+import svelteDesktop from '$lib/assets/svelte-desktop.webp?enhanced';
 export const projects = [
 	{
 		id: 0,
@@ -6,8 +11,8 @@ export const projects = [
             Utilizes reddit json API to browse posts and subreddits on any device. Tou can even download it, thanks to <storng>PWA</strong> integration.</p>`,
 		title: 'React Reddit Client',
 		img: {
-			desktop: '/react-desktop.webp',
-			mobile: '/react-mobile.webp'
+			desktop: ReactDesktop,
+			mobile: ReactMobile
 		},
 		bgColor: 'bg-sky-600',
 		textColor: 'text-sky-100',
@@ -27,8 +32,8 @@ export const projects = [
 			'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, API calls to Read, Update and Create new tickets. Created with <strong>Vue</strong>, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling and <strong>Firebase</strong for backend.',
 		title: 'Check my ticket',
 		img: {
-			desktop: '/vue-desktop.webp',
-			mobile: '/vue-mobile.webp'
+			desktop: vueDesktop,
+			mobile: vueMobile
 		},
 		bgColor: 'bg-teal-600',
 		textColor: 'text-teal-100',
@@ -48,13 +53,14 @@ export const projects = [
 		content:
 			'Full Stack mulit tenant Web application, which helps you with SEO. Includes user Authentication, REST API and much more. Created with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong> and <strong>Firebase</strong>',
 		img: {
-			desktop: '/svelte-desktop.webp',
+			desktop: svelteDesktop,
 			mobile: ''
 		},
 		title: 'SEO Catcher',
 		bgColor: 'bg-amber-700',
 		textColor: 'text-amber-100',
 		borderColor: 'border-amber-700',
+		href: null,
 		icon: 'logos:svelte-icon',
 		tech: [
 			{ name: 'SvelteKit', href: 'https://kit.svelte.dev/', icon: 'logos:svelte-icon' },
