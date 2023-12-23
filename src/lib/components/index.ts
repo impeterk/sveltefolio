@@ -12,7 +12,7 @@ import ProjectAccordion from './projectPartials/ProjectAccordion.svelte';
 import ProjectMobile from './projectPartials/ProjectMobile.svelte';
 import ProjectFooter from './projectPartials/ProjectFooter.svelte';
 import ProjectDesktop from './projectPartials/ProjectDesktop.svelte';
-
+import MobileSidebar from './MobileSidebar.svelte';
 export {
 	Footer,
 	GradientText,
@@ -27,5 +27,6 @@ export {
 	ProjectAccordion,
 	ProjectMobile,
 	ProjectFooter,
-	ProjectDesktop
+	ProjectDesktop,
+	MobileSidebar
 };

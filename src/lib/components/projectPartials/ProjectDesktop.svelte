@@ -9,7 +9,6 @@
 			desktop: string;
 		};
 	};
-
 </script>
 
 <div class="mockup-browser hidden border border-info bg-base-300 shadow shadow-neutral md:block">
@@ -29,14 +28,13 @@
 		class="artboard artboard-horizontal flex h-[349px] w-[620px] justify-center overflow-hidden border-t border-info xl:h-[414px] xl:w-[736px]"
 	>
 		{#key project.id}
-			<enhanced:img
+			<div
+				class="h-full w-full"
 				in:fly={{ x: 300, duration: 600, delay: 600, easing: quintOut }}
 				out:fly={{ x: -300, duration: 600, easing: quintOut }}
-				src={project.img.desktop}
-				alt="project"
-				class="w-full h-full"
-				loading="lazy"
-			/>
+			>
+				<enhanced:img src={project.img.desktop} alt="project" loading="lazy" class="h-full w-full" />
+			</div>
 		{/key}
 	</div>
 </div>
