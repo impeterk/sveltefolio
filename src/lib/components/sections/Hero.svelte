@@ -25,6 +25,5 @@
 			<span><GradientText>full-stack web developer</GradientText></span>
 			creating functional web applications using latest web technologies.
 		</p>
-		<p class="text-center">scroll down to learn more</p>
 	</div>
 </section>

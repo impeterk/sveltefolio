@@ -1,6 +1,8 @@
 <script lang="ts">
 	import GradientText from '../GradientText.svelte';
-
+	import { browser } from '$app/environment';
+	import { fade } from 'svelte/transition';
+	import Icon from '@iconify/svelte';
 	let y: number = 0;
 	function scrollAboveAnchor() {
 		if (window.innerWidth > 1280) return;
@@ -22,31 +24,22 @@
 				for="my-drawer"
 				id="hamburger"
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					class="inline-block h-8 w-8 stroke-current"
-					><path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					></path></svg
-				>
+				<Icon icon="mdi:menu" class="text-4xl"/>
 			</label>
 		</div>
 		<div class="navbar-center">
-			{#if y > window.innerHeight}
-				
-			<span class="sm:hidden text-xl font-code font-semibold">
-				<GradientText>
+			{#if browser && y > window.innerHeight}
+			<span class="sm:hidden text-xl font-code font-semibold"
+			in:fade
+			out:fade
+			>
+				<GradientText to="to-success">
 					
-					{`<Peter Kudelas />`}
+					{`<Peter Kudeláš />`}
 				</GradientText>
 			</span>
 			{/if}
-			<div class="max-sm:hidden">
+			<div class="max-sm:hidden space-x-4">
 				<a class="btn btn-ghost text-xl" href="#projects"
 					><GradientText
 						from="from-base-content hover:from-info"
