@@ -12,7 +12,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<div class="section h-full flex flex-col items-center justify-center prose mx-auto mt-20 text-center">
+<div class="section flex flex-col items-center justify-center prose mx-auto mt-20 text-center">
 <h1>Oopsie daisy</h1>
 <enhanced:img src="$lib/assets/404.webp" alt="lego figurine holding disconnected power line" />
 <h2>Something went wrong 🤔

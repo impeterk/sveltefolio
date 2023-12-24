@@ -11,10 +11,10 @@
 <div class="mockup-phone border-none bg-base-content md:hidden">
 			<div class="camera"></div>
 			<div class="display">
-				<div class="artboard h-[600px] max-w-[300px] bg-dark">
+				<div class="artboard h-[600px] min-w-[280px] max-w-[300px] bg-dark">
 					{#key project.id}
 						<div
-							class="h-full w-full"
+							class="h-full w-full bg-base-100"
 							in:fly={{ x: '50%', duration: 500, delay: 500 }}
 							out:fly={{ x: '-100%', duration: 500 }}
 						>

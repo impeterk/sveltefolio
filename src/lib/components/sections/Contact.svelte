@@ -106,7 +106,7 @@
 			</a>
 
 			<a
-				href="http://github.com/impeterk"
+				href="http://linkedin.com/in/impeterk"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="flex flex-col items-center hover:text-info"

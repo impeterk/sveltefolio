@@ -7,8 +7,8 @@ export const projects = [
 	{
 		id: 0,
 		name: 'react',
-		content: `<p>Simple react Single page application created with <strong>React</strong> and <strong>Bulma</strong> for styling. 
-            Utilizes reddit json API to browse posts and subreddits on any device. Tou can even download it, thanks to <storng>PWA</strong> integration.</p>`,
+		content: `<p>Simple react Single page application created with <strong>React</strong> and <strong>Bulma</strong> for styling.
+		Utilizes reddit json API to browse posts and subreddits on any device. Tou can even download it, thanks to <storng>PWA</strong> integration.</p>`,
 		title: 'React Reddit Client',
 		img: {
 			desktop: ReactDesktop,
@@ -29,7 +29,7 @@ export const projects = [
 		id: 1,
 		name: 'vue',
 		content:
-			'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, API calls to Read, Update and Create new tickets. Created with <strong>Vue</strong>, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling and <strong>Firebase</strong for backend.',
+			'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, CRUD Operations and connection with <strong>Azure LogicApps</strong>. Created with <strong>Vue</strong>, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling and <strong>Firebase</strong> for backend.',
 		title: 'Check my ticket',
 		img: {
 			desktop: vueDesktop,
@@ -51,7 +51,7 @@ export const projects = [
 		id: 2,
 		name: 'svelte',
 		content:
-			'Full Stack mulit tenant Web application, which helps you with SEO. Includes user Authentication, REST API and much more. Created with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong> and <strong>Firebase</strong>',
+			'Full Stack mulit tenant AI focused Web application Created with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong> and <strong>Firebase</strong>. Handles User authentication to correct organization, dedicated APIs for AI. Application has been developed for Henkel.',
 		img: {
 			desktop: svelteDesktop,
 			mobile: ''

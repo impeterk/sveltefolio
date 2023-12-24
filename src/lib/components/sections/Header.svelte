@@ -67,9 +67,8 @@
 			</nav>
 		</div>
 		<div class="navbar-end">
-
 			<a
-				class="btn btn-ghost text-xl decoration-primary underline-offset-4 hover:underline max-sm:hidden"
+				class="btn btn-ghost text-xl decoration-primary underline-offset-4  hover:text-primary hover:underline max-sm:hidden"
 				href="https://now.peterKudelas.eu">Now</a
 			>
 		</div>
