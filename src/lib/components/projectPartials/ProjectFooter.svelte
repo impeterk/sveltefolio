@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex flex-wrap items-center">
-			<div class="mx-auto flex space-x-12 max-sm:mb-8">
+			<div class="mx-auto flex space-x-6 sm:space-x-12 max-sm:mb-8">
 				{#each project.tech as { icon, name, href }}
 					<a {href} target="_blank" rel="noopener noreferrer" class="group">
 						<div class="relative flex flex-col items-center">

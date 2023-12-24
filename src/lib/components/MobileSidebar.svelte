@@ -18,18 +18,18 @@ import Icon from '@iconify/svelte';
 	<aside class="flex h-full w-2/3 flex-col justify-center bg-base-200">
 		<ul class="menu gap-4 mt-auto">
 			<li>
-				<a class="btn btn-ghost text-2xl" href="#projects" on:click={() => handleDrawer()}>
+				<a class="btn btn-ghost text-2xl" href="/#projects" on:click={() => handleDrawer()}>
 					<GradientText from="from-info" to="to-primary">Projects </GradientText> <Icon icon="mdi:code" class="text-4xl text-primary"/> 
 				</a>
 			</li>
 			<li>
-				<a class="btn btn-ghost text-2xl" href="#aboutme" on:click={() => handleDrawer()}>
+				<a class="btn btn-ghost text-2xl" href="/#aboutme" on:click={() => handleDrawer()}>
 					<GradientText from="from-accent" to="to-success">About Me</GradientText>
                     <Icon icon="mdi:account" class="text-4xl text-success"/> 
 				</a>
 			</li>
 			<li>
-				<a class="btn btn-ghost text-2xl" href="#contact" on:click={() => handleDrawer()}>
+				<a class="btn btn-ghost text-2xl" href="/#contact" on:click={() => handleDrawer()}>
 					<GradientText from="from-amber-500" to="to-warning">Contact</GradientText>
                     <Icon icon="mdi:at" class="text-4xl text-warning"/> 
 

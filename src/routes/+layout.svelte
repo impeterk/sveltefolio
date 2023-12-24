@@ -6,11 +6,11 @@
 	$: ({ colorTheme } = data);
 </script>
 
-<div class="drawer">
+<div class="drawer h-full">
 	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-	<div class="layout drawer-content mx-auto min-h-full max-w-7xl px-8 xl:px-0">
+	<div class="layout drawer-content mx-auto min-h-full max-w-7xl px-8 xl:px-0 w-full">
 		<Header />
-		<main class="flex flex-col gap-20 lg:max-xl:gap-40">
+		<main class="flex flex-col gap-20 lg:max-xl:gap-40 h-full">
 			<slot />
 		</main>
 		<Footer>
@@ -25,6 +25,6 @@
 <style lang="postcss">
 	.layout {
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows:  auto 1fr auto;
 	}
 </style>
