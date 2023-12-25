@@ -71,11 +71,11 @@
 <Contact />
 
 <!-- contact form related -->
-<div class="toast toast-center toast-top">
-	{#if success}
+<div class="toast toast-center toast-top z-[100]">
 	<div class="alert alert-success" in:fade out:fade>
 		<span>Message have been send successfully 🎉</span>
 	</div>
+	{#if success}
 	
 	{/if}
 	
