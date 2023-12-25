@@ -14,7 +14,7 @@
 	<p>I am Peter from Slovakia. I have always been drawn to digital technologies, but as luck would have it, my life went different route.</p>
 	<p>When I was 25 I have decided to turn my life around and enrolled into Front End Engeneer Course at <a class=" link-warning" href="http://codecademy.com" target="_blank" rel="noopener noreferrer">Codecademy</a>. I ❤️ every bit of web development ever since and I quickly realized that Full stack development is the way for me.</p>
 	<hr>
-	<h3 class="text-center">What am I currently up to?! <br> Check out my <a href="https://now.peterkudelas.eu" class="link">Now page</a></h3>
+	<h3 class="text-center">What am I currently up to?! <br> Check out my <a href="https://now.peterkudelas.eu" class="link link-accent text-accent">Now page</a></h3>
 </article>
 <div class="grid grid-cols-2 mt-12 ml-[12.5%] lg:ml-[15%] xl:ml-[20%]">
 	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:svelte" /><span class="text-sm"> Svelte</span> </p>
