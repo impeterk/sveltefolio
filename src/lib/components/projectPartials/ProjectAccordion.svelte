@@ -19,6 +19,7 @@
 		name="my-accordion-2"
 		checked={project.id === activeProject}
 		on:click={() => dispatch('updateActive')}
+		aria-label={`${project.name} accordion`}
 	/>
 	<div class="collapse-title flex items-center gap-4 text-xl font-medium capitalize">
 		{project.name}

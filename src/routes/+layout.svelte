@@ -7,7 +7,7 @@
 </script>
 
 <div class="drawer min-h-full">
-	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+	<input id="my-drawer" type="checkbox" class="drawer-toggle"  aria-label="drawer"/>
 	<div class="layout drawer-content mx-auto min-h-full max-w-7xl px-8 xl:px-0 w-full overscroll-none">
 		<Header />
 		<main class="flex flex-col gap-20 lg:max-xl:gap-40 h-full">

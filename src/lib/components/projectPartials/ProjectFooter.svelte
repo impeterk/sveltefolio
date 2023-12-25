@@ -13,7 +13,7 @@
 <div class="flex flex-wrap items-center">
 			<div class="mx-auto flex space-x-6 sm:space-x-12 max-sm:mb-8">
 				{#each project.tech as { icon, name, href }}
-					<a {href} target="_blank" rel="noopener noreferrer" class="group">
+					<a {href} target="_blank" rel="noopener noreferrer" aria-label={name} class="group">
 						<div class="relative flex flex-col items-center">
 							<Icon {icon} class="absolute left-0 text-4xl blur-xl" />
 							<Icon {icon} class="text-4xl group-hover:animate-pulse sm:text-5xl" />

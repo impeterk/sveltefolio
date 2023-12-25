@@ -14,9 +14,9 @@ export const projects = [
 			desktop: ReactDesktop,
 			mobile: ReactMobile
 		},
-		bgColor: 'bg-sky-600',
-		textColor: 'text-sky-100',
-		borderColor: 'border-sky-600',
+		bgColor: 'bg-sky-500',
+		textColor: 'text-slate-950',
+		borderColor: 'border-sky-500',
 		href: 'https://reddit.peterkudelas.eu/about',
 		icon: 'logos:react',
 		tech: [
@@ -35,9 +35,9 @@ export const projects = [
 			desktop: vueDesktop,
 			mobile: vueMobile
 		},
-		bgColor: 'bg-teal-600',
-		textColor: 'text-teal-100',
-		borderColor: 'border-teal-600',
+		bgColor: 'bg-teal-500',
+		textColor: 'text-slate-950',
+		borderColor: 'border-teal-500',
 		href: 'https://www.henkel-adhesives.com/check-my-ticket.html',
 		icon: 'logos:vue',
 		tech: [
@@ -57,9 +57,9 @@ export const projects = [
 			mobile: ''
 		},
 		title: 'SEO Catcher',
-		bgColor: 'bg-amber-700',
-		textColor: 'text-amber-100',
-		borderColor: 'border-amber-700',
+		bgColor: 'bg-amber-500',
+		textColor: 'text-slate-950',
+		borderColor: 'border-amber-500',
 		href: null,
 		icon: 'logos:svelte-icon',
 		tech: [
