@@ -5,15 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	@apply transition-all duration-100 ease-linear;
+}
+
 body,
 html {
-    @apply h-full m-0 p-0 box-border
+	@apply m-0 box-border h-full p-0;
 }
 
 body {
-    @apply text-base-content;
+	@apply text-base-content;
 }
 
 body::before {
-    @apply bg-theme content-[''] w-full h-full fixed opacity-90 z-[-1];
+	@apply bg-theme fixed z-[-1] h-full w-full opacity-90 content-[''];
 }

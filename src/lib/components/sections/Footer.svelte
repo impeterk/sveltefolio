@@ -1,12 +1,11 @@
 <script lang="ts">
-	import ThemeSwitcher from './ThemeSwitcher.svelte';
-	import 'iconify-icon';
+	import Icon from "@iconify/svelte";
 </script>
 
 <div
-	class="relative mt-20 flex flex-col gap-2 border-t border-neutral py-4 font-mono md:flex-row md:items-center lg:justify-center"
+	class="relative mt-20 xl:mt-10 2xl:mt-0 flex flex-col gap-2 border-t border-neutral py-4 font-mono md:flex-row md:items-center lg:justify-center"
 >
-	<p>Peter Kudelas &copy {new Date().getFullYear()} |</p>
+	<p>Peter Kudeláš {new Date().getFullYear()} |</p>
 	<div class="inline-flex space-x-3">
 		<span>created with</span>
 		<a
@@ -16,7 +15,7 @@
 			aria-label="Svelte Kit Link"
 			class="flex"
 		>
-			<iconify-icon icon="logos:svelte-icon" class="text-2xl" /></a
+			<Icon icon="logos:svelte-icon" class="text-2xl" /></a
 		>
 		<a
 			href="http://tailwindcss.com"
@@ -25,7 +24,7 @@
 			aria-label="tailwind CSS link"
 			class="flex"
 		>
-			<iconify-icon icon="devicon:tailwindcss" class="text-2xl" /></a
+			<Icon icon="devicon:tailwindcss" class="text-2xl" /></a
 		>
 	</div>
 	<slot />
