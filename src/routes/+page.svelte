@@ -72,10 +72,10 @@
 
 <!-- contact form related -->
 <div class="toast toast-center toast-top z-[100]">
+	{#if success}
 	<div class="alert alert-success" in:fade out:fade>
 		<span>Message have been send successfully 🎉</span>
 	</div>
-	{#if success}
 	
 	{/if}
 	
