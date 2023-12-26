@@ -14,7 +14,7 @@
 				<div class="artboard h-[600px] min-w-[280px] max-w-[300px] bg-dark">
 					{#key project.id}
 						<div
-							class="h-full w-full bg-base-100"
+							class="h-full w-full"
 							in:fly={{ x: '50%', duration: 500, delay: 500 }}
 							out:fly={{ x: '-100%', duration: 500 }}
 						>
