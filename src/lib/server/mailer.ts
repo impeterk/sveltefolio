@@ -1,11 +1,11 @@
 import nodemailer from "nodemailer";
-import { BREVO_KEY } from '$env/static/private'
+import { BREVO_KEY, BREVO_USER } from '$env/static/private'
 
 const transporter = nodemailer.createTransport({
   host: "smtp-relay.brevo.com",
   port: 587,
   auth: {
-    user: "peterwebsitemail@gmail.com",
+    user: BREVO_USER,
     pass: BREVO_KEY
   }
 })
