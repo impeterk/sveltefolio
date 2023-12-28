@@ -12,7 +12,7 @@
 <article class="prose text-justify">
 	<h3>Hello Everyone 👋</h3>
 	<p>I am Peter from Slovakia. I have always been drawn to digital technologies, but as luck would have it, my life went different route.</p>
-	<p>When I was 25 I have decided to turn my life around and enrolled into Front End Engeneer Course at <a class=" link-warning" href="http://codecademy.com" target="_blank" rel="noopener noreferrer">Codecademy</a>. I ❤️ every bit of web development ever since and I quickly realized that Full stack development is the way for me.</p>
+	<p>About 2 yeaer ago, I have decided to turn my life around and enrolled into Front End Engeneer Course at <a class=" link-warning" href="http://codecademy.com" target="_blank" rel="noopener noreferrer">Codecademy</a>. I ❤️ every bit of web development ever since and I quickly realized that Full stack development is the way for me.</p>
 	<hr>
 	<h3 class="text-center">What am I currently up to?! <br> Check out my <a href="https://now.peterkudelas.eu" class="link link-accent text-accent">Now page</a></h3>
 </article>
