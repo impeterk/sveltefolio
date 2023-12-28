@@ -23,7 +23,7 @@
 	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:nuxtdotjs" /><span class="text-sm"> Nuxt</span> </p>
 	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:react" /><span class="text-sm"> React</span> </p>
 	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:firebase" /><span class="text-sm"> Firebase</span> </p>
-	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:supabase" /><span class="text-sm"> Supabase</span> </p>
+	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:postgresql" /><span class="text-sm"> PostgreSQL</span> </p>
 	<p class="flex items-center gap-4 hover:scale-105 hover:text-accent transition-all duration-200"><Icon icon="simple-icons:linux" /><span class="text-sm"> Linux</span> </p>
 </div>
 
