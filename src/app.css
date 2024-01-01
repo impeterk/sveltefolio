@@ -2,8 +2,7 @@
 @import '@fontsource-variable/inter';
 
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 * {
 	@apply transition-all duration-100 ease-linear;
@@ -21,3 +20,22 @@ body {
 body::before {
 	@apply bg-theme fixed z-[-1] h-full w-full opacity-90 content-[''];
 }
+
+::-webkit-scrollbar {
+	@apply w-3
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-neutral
+}
+
+::-webkit-scrollbar-thumb {
+	@apply rounded-md bg-gradient-to-b from-info to-info
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply from-info to-primary
+}
+
+@tailwind components;
+@tailwind utilities;
