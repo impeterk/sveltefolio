@@ -1,23 +1,15 @@
 <script lang="ts">
-	import GradientText from '../GradientText.svelte';
+	import { page } from "$app/stores";
 </script>
 
 <nav class="space-x-4 max-sm:hidden">
-	<a class="group btn btn-ghost text-xl" href="/"
-		><GradientText
-			from="from-base-content group-hover:from-info"
-			to="to-base-content group-hover:to-primary"
+	<a class="group btn btn-ghost text-xl hover:text-primary" href="/"
 		>
-			Home</GradientText
-		></a
+			Home</a
 	>
 
-	<a class="group btn btn-ghost text-xl" href="/blog"
-		><GradientText
-			from="from-base-content group-hover:from-secondary"
-			to="to-base-content group-hover:to-fuchsia-500"
+	<a class="group btn btn-ghost text-xl hover:text-secondary" class:text-secondary={$page.url.pathname.includes('blog')} href="/blog"
 		>
-			Blog</GradientText
-		></a
+			Blog</a
 	>
 </nav>
