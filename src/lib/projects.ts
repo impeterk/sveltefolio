@@ -29,7 +29,7 @@ export const projects = [
 		id: 1,
 		name: 'vue',
 		content:
-			'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, CRUD Operations and connection with <strong>Azure LogicApps</strong>. Created with <strong>Vue</strong>, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling and <strong>Firebase</strong> for backend.',
+			'Single page Full-stack Web Application for Azure DevOps. Handles user authentification, CRUD Operations and connection with <strong>Azure LogicApps</strong>. Created with <strong>Vue </strong> and composition API, <strong>Pinia</strong> for state management, <strong>TailwindCSS</strong> for styling. I have also migrated users from Firebase to <strong>Supabase</strong>',
 		title: 'Check my ticket',
 		img: {
 			desktop: vueDesktop,
@@ -42,8 +42,8 @@ export const projects = [
 		icon: 'logos:vue',
 		tech: [
 			{ name: 'VueJS', href: 'https://vuejs.org/', icon: 'logos:vue' },
-			{ name: 'Pinia', href: 'https://pinia.vuejs.org/', icon: 'logos:pinia' },
 			{ name: 'TailwindCSS', href: 'https://tailwindcss.com/', icon: 'logos:tailwindcss-icon' },
+			{ name: 'Supabase', href: 'https://supabase.com/', icon: 'logos:supabase-icon' },
 			{ name: 'Firebase', href: 'https://firebase.google.com/', icon: 'logos:firebase' }
 		]
 	},

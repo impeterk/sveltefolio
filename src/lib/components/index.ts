@@ -13,6 +13,11 @@ import ProjectMobile from './projectPartials/ProjectMobile.svelte';
 import ProjectFooter from './projectPartials/ProjectFooter.svelte';
 import ProjectDesktop from './projectPartials/ProjectDesktop.svelte';
 import MobileSidebar from './MobileSidebar.svelte';
+import Navigation from './navigation/Navigation.svelte';
+import MobileNavigation from './navigation/MobileNavigation.svelte';
+import HomeNavigation from './navigation/HomeNavigation.svelte';
+import MobileHomeNavigation from './navigation/MobileHomeNavigation.svelte';
+
 export {
 	Footer,
 	GradientText,
@@ -28,5 +33,9 @@ export {
 	ProjectMobile,
 	ProjectFooter,
 	ProjectDesktop,
-	MobileSidebar
+	MobileSidebar,
+	Navigation,
+	HomeNavigation,
+	MobileHomeNavigation,
+	MobileNavigation
 };

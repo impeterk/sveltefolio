@@ -1,8 +1,9 @@
 <script lang="ts">
-	import GradientText from '../GradientText.svelte';
+	import {Navigation, HomeNavigation, GradientText} from "$lib/components"
 	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
+	import { page } from '$app/stores';
 	let y: number = 0;
 	function scrollAboveAnchor() {
 		if (window.innerWidth > 1280) return;
@@ -39,32 +40,11 @@
 				</GradientText>
 			</span>
 			{/if}
-			<nav class="max-sm:hidden space-x-4">
-				<a class="btn btn-ghost text-xl group" href="/#projects"
-					><GradientText
-						from="from-base-content group-hover:from-info"
-						to="to-base-content group-hover:to-primary"
-					>
-						Projects</GradientText
-					></a
-				>
-				<a class="btn btn-ghost text-xl group" href="/#aboutme"
-					><GradientText
-						from="from-base-content group-hover:from-accent"
-						to="to-base-content group-hover:to-success"
-					>
-						About Me</GradientText
-					></a
-				>
-				<a class="btn btn-ghost text-xl group" href="/#contact"
-					><GradientText
-						from="from-base-content group-hover:from-amber-500"
-						to="to-base-content group-hover:to-warning"
-					>
-						Contact</GradientText
-					></a
-				>
-			</nav>
+			{#if $page.route.id === '/'}
+			<HomeNavigation/>
+			{:else}
+			<Navigation />
+			{/if}
 		</div>
 		<div class="navbar-end">
 			<a
