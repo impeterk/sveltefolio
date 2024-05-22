@@ -19,7 +19,7 @@ export const actions: Actions = {
 		// const message = data.get('message') as string
 
 
-		// // const response = await mailer({email, name, message})
+		// const response = await mailer({email, name, message})
 		
 		// if (response) {
 		// 	return {
