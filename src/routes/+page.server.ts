@@ -12,17 +12,10 @@ export const actions: Actions = {
 		}
 	},
 	contact: async({request}) => {
-		const data = await request.formData()
-		const email = data.get('email') as string;
-		const name = data.get('name') as string
-		const message = data.get('message') as string
-
-
-		const response = await fetch("https://sveltefolio.vercel.app/api/mail", {
+		const response = await fetch("https://www.mylinkz.one/api/contact", {
 			method: 'POST', 
-		body: data
+		body: await request.formData()
 	})
-		
 		if (response.ok) {
 			return {
 				success: true
