@@ -3,12 +3,14 @@
 	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
+	import { page } from '$app/stores';
 	let y: number = 0;
 	function scrollAboveAnchor() {
 		if (window.innerWidth > 1280) return;
 
 		window.scrollTo(window.scrollX, window.scrollY - 75);
 	}
+	console.log($page.url)
 </script>
 
 <svelte:window bind:scrollY={y} on:hashchange={() => scrollAboveAnchor()} />
@@ -69,7 +71,7 @@
 		<div class="navbar-end">
 			<a
 				class="btn btn-ghost text-xl decoration-primary underline-offset-4  hover:text-primary hover:underline max-sm:hidden"
-				href="https://now.peterKudelas.eu">Now</a
+				href={`${$page.url.protocol}//now.${$page.url.hostname}`}>Now</a
 			>
 		</div>
 	</div>

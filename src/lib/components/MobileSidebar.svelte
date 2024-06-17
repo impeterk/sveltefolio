@@ -2,6 +2,7 @@
 	import { GradientText } from './';
 import Icon from '@iconify/svelte';
 	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
 
 	let drawer: HTMLInputElement;
 	$: if (browser) {
@@ -11,6 +12,7 @@ import Icon from '@iconify/svelte';
 	function handleDrawer() {
 		drawer.checked = false;
 	}
+	
 </script>
 
 <nav class="drawer-side z-40" id="sidebar">
@@ -39,7 +41,7 @@ import Icon from '@iconify/svelte';
         <div class="mt-auto text-center mb-10">
             <a
                 class="btn btn-ghost text-2xl decoration-primary underline-offset-4 hover:underline "
-                href="https://now.peterKudelas.eu"
+                href={`${$page.url.protocol}//now.${$page.url.hostname}`}
             >
                 Now
                 <Icon icon="mdi:calendar-clock" class="text-4xl "/> 
