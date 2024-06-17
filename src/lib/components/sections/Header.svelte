@@ -10,7 +10,6 @@
 
 		window.scrollTo(window.scrollX, window.scrollY - 75);
 	}
-	console.log($page.url)
 </script>
 
 <svelte:window bind:scrollY={y} on:hashchange={() => scrollAboveAnchor()} />
